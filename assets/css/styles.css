@@ -595,7 +595,7 @@ a {
 }
 
 @media only screen and (max-width:768px) {
-    .h-100vh{
+    .qr.h-100vh{
         height: auto;
         overflow: visible;
     }
