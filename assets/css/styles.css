@@ -59,7 +59,15 @@ section>.col-10 {
     /* scroll thumb and track */
     scroll-margin: 29px 0;
 }
-
+.sidebar .dropdownList{
+  max-height: 0;
+  overflow: hidden;
+  background-color: #7241B7;
+}
+.sidebar .dropdownList.active,.dropdownlistBtn:hover .dropdownList{
+  max-height: 2000px;
+  margin-top: 20px;
+}
 
 /* background */
 .bg-main {
@@ -349,19 +357,19 @@ section>.col-10 {
   
   @keyframes gra {
     0% {
-      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #A75BD7), color-stop(21%, #A75BD7), color-stop(56%, #472CA1), color-stop(88%, #CDAEE2));
+      background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #A75BD7), color-stop(21%, #A75BD7), color-stop(56%, #472CA1), color-stop(88%, #9a56c8));
       background: -webkit-linear-gradient(-45deg, #A75BD7 0%, #A75BD7 21%, #472CA1 56%, #8a6f9b 88%);
-      background: linear-gradient(135deg, #A75BD7 0%, #A75BD7 21%, #472CA1 56%, #CDAEE2 88%);
+      background: linear-gradient(135deg, #A75BD7 0%, #A75BD7 21%, #472CA1 56%, #9a56c8 88%);
     }
     50% {
-      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #A75BD7), color-stop(10%, #A75BD7), color-stop(40%, #472CA1), color-stop(60%, #CDAEE2));
-      background: -webkit-linear-gradient(-45deg, #A75BD7 0%, #A75BD7 10%, #472CA1 40%, #CDAEE2 60%);
-      background: linear-gradient(135deg, #A75BD7 0%, #A75BD7 10%, #472CA1 40%, #CDAEE2 60%);
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #A75BD7), color-stop(10%, #A75BD7), color-stop(40%, #472CA1), color-stop(60%, #9a56c8));
+      background: -webkit-linear-gradient(-45deg, #A75BD7 0%, #A75BD7 10%, #472CA1 40%, #9a56c8 60%);
+      background: linear-gradient(135deg, #A75BD7 0%, #A75BD7 10%, #472CA1 40%, #9a56c8 60%);
     }
     100% {
-      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #A75BD7), color-stop(5%, #A75BD7), color-stop(10%, #472CA1), color-stop(40%, #CDAEE2));
-      background: -webkit-linear-gradient(-45deg, #A75BD7 0%, #A75BD7 5%, #472CA1 10%, #CDAEE2 40%);
-      background: linear-gradient(135deg, #A75BD7 0%, #A75BD7 5%, #472CA1 10%, #CDAEE2 40%);
+      background: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #A75BD7), color-stop(5%, #A75BD7), color-stop(10%, #472CA1), color-stop(40%, #9a56c8));
+      background: -webkit-linear-gradient(-45deg, #A75BD7 0%, #A75BD7 5%, #472CA1 10%, #9a56c8 40%);
+      background: linear-gradient(135deg, #A75BD7 0%, #A75BD7 5%, #472CA1 10%, #9a56c8 40%);
     }
   }
 
@@ -489,16 +497,19 @@ a {
     height: 100vh;
     transition: all .8s;
     z-index: 20;
+}
+
+.sidebar.close {
+    width: 117px;
+}
+
+.sidebar > div:first-child {
     animation: gra 3s infinite;
     animation-direction: reverse;
     -webkit-animation: gra 3s infinite;
     -webkit-animation-direction: reverse;
     animation-timing-function: linear;
     -webkit-animation-timing-function: linear;
-}
-
-.sidebar.close {
-    width: 117px;
 }
 
 .sidebar.close img[alt="bell-alert"],
@@ -536,10 +547,6 @@ a {
     background-color: #5c0a93;
 }
 
-.sidebar ul {
-    font-size: 13px;
-    background-color: #1F2A37;
-}
 
 .sidebar ul li {
     padding-top: 15px;

@@ -13,6 +13,11 @@ openSidebar.addEventListener('click',function () {
   overlay.classList.add('active');
 })
 
+overlay.addEventListener('click',function () {
+   this.classList.remove('active');
+   document.querySelector('.sidebar').classList.remove('close');
+})
+
 
 // datapicker
 
