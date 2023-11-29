@@ -68,6 +68,9 @@ section>.col-10 {
   max-height: 2000px;
   margin-top: 20px;
 }
+.dropdownlistBtn:hover svg{
+    transform: rotate(180deg);
+}
 
 /* background */
 .bg-main {
@@ -253,6 +256,10 @@ section>.col-10 {
 
 .w-340 {
     width: 340px;
+}
+/* gap */
+.gap-6{
+    gap: 83px;
 }
 /* max width */
 .max-w-400{
@@ -500,7 +507,7 @@ a {
 }
 
 .sidebar.close {
-    width: 117px;
+    width: 52px;
 }
 
 .sidebar > div:first-child {
@@ -512,11 +519,17 @@ a {
     -webkit-animation-timing-function: linear;
 }
 
-.sidebar.close img[alt="bell-alert"],
-.sidebar.close img[alt="cog"],
-.sidebar.close .avatar-name,
+.sidebar.close > div,
 .sidebar.close ul p {
-    display: none;
+    display: none!important;
+}
+
+.sidebar.close > ul{
+    margin-top: 7rem!important;
+}
+
+.sidebar.close > ul ul li{
+    padding-right: 0!important;
 }
 
 #toggle-sidebar {
@@ -584,12 +597,12 @@ a {
         position: fixed !important;
     }
 
-    .sidebar.close img[alt="bell-alert"],
-    .sidebar.close img[alt="cog"],
-    .sidebar.close .avatar-name,
-    .sidebar.close ul p {
-        display: block;
-    }
+    .sidebar.close > div, .sidebar.close ul p {
+        display: block !important;
+      }
+      .sidebar.close > ul {
+        margin-top: 0!important;
+      }
 }
 
 @media only screen and (max-width:992px) {
