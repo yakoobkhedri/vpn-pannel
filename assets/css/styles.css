@@ -372,6 +372,7 @@ circle#circle3 {
 .tooltip {
     position: relative;
     float: right;
+    z-index: 277;
 }
 .tooltip.show {
     opacity: 0!important;
